@@ -1,0 +1,148 @@
+<title>Reyhn Photography</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Landscapes, street, wildlife and architecture by Reyhn.">
+<style>
+/* Layout: one column of categories, a three-up grid from tablet width. Dark-first, quiet, the photographs carry the page. */
+:root{
+  --bg:#0b0c0e; --fg:#e9e7e2; --muted:#8a8d93; --line:#1d2026; --accent:#c9b98f;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){ --bg:#f5f4f0; --fg:#111214; --muted:#6b6e74; --line:#dcdad4; --accent:#7a6a3f; color-scheme: light; }
+}
+:root[data-theme="light"]{ --bg:#f5f4f0; --fg:#111214; --muted:#6b6e74; --line:#dcdad4; --accent:#7a6a3f; color-scheme: light; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-block:16px;margin:0 -16px;padding-left:16px;padding-right:16px;background:var(--bg);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:.32em;text-transform:uppercase;font-size:14px}
+header nav{display:flex;flex-wrap:wrap;gap:14px}
+header nav a{font-size:13px;text-decoration:none;color:var(--muted);letter-spacing:.06em}
+header nav a:hover{color:var(--fg)}
+.hero{min-height:60vh;display:flex;flex-direction:column;justify-content:flex-end;padding-block:48px 56px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(44px,14vw,128px);font-weight:300;letter-spacing:-.02em;line-height:.95}
+.hero p{margin-top:18px;color:var(--muted);max-width:52ch;font-size:16px}
+.btn{align-self:flex-start;margin-top:26px;padding:12px 20px;border:1px solid var(--fg);text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.btn:hover{background:var(--fg);color:var(--bg)}
+section{padding-block:56px;border-bottom:1px solid var(--line)}
+section h2{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:960px){ .grid{grid-template-columns:repeat(3,1fr);gap:14px} }
+.grid button{all:unset;cursor:zoom-in;display:block;overflow:hidden;background:var(--line);max-width:100%}
+.grid img{display:block;width:100%;height:auto;max-width:100%;transition:transform .6s ease,opacity .6s ease;opacity:1}
+.grid button:hover img{transform:scale(1.03)}
+.grid button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+footer{padding-block:36px 48px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{text-decoration:none}
+@media (prefers-reduced-motion: reduce){ .grid img{transition:none} }
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:86vh;object-fit:contain}
+#lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#bbb;font-size:13px;letter-spacing:.04em}
+#lb button{all:unset;position:absolute;color:#ddd;font-size:30px;cursor:pointer;padding:8px 14px}
+#lb .x{top:6px;right:6px}#lb .p{left:0;top:50%;transform:translateY(-50%)}#lb .n{right:0;top:50%;transform:translateY(-50%)}
+@media (min-width:900px){ header{padding-left:48px;padding-right:48px;margin:0 -48px} body{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))} }
+</style>
+
+<header>
+  <div class="brand">Reyhn</div>
+  <nav>
+    <a href="#landscape">Landscape</a>
+    <a href="#street">Street</a>
+    <a href="#wildlife">Wildlife</a>
+    <a href="#architecture">Architecture</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>REYHN</h1>
+  <p>Raw. Cinematic. Technical. Photography from the road: landscapes, streets, wildlife and architecture.</p>
+  <a class="btn" href="https://www.instagram.com/Reyhn_Raw/" target="_blank" rel="noopener">Follow on Instagram</a>
+</div>
+
+<section id="landscape">
+  <h2>Landscape</h2>
+  <div class="grid">
+    <button data-src="img/07_Landscape_B0002052.jpg" data-cap="Mount Batur, sunrise above the clouds"><img src="img/07_Landscape_B0002052.jpg" alt="Mount Batur at sunrise above a sea of clouds" loading="lazy"></button>
+    <button data-src="img/08_Landscape_B0002081.jpg" data-cap="Mount Batur, first light"><img src="img/08_Landscape_B0002081.jpg" alt="Mount Batur at dawn with a rising sun" loading="lazy"></button>
+    <button data-src="img/09_Landscape_B0002225.jpg" data-cap="Mount Batur, silhouette in the haze"><img src="img/09_Landscape_B0002225.jpg" alt="Silhouette of a person raising an arm on a misty ridge" loading="lazy"></button>
+  </div>
+</section>
+
+<section id="street">
+  <h2>Street</h2>
+  <div class="grid">
+    <button data-src="img/05_Street_B0003414.jpg" data-cap="Street, texture and colour"><img src="img/05_Street_B0003414.jpg" alt="Street wall with layered murals and texture" loading="lazy"></button>
+    <button data-src="img/06_Street_B0003401.jpg" data-cap="Street, graffiti alley"><img src="img/06_Street_B0003401.jpg" alt="Narrow alley covered in murals and graffiti" loading="lazy"></button>
+  </div>
+</section>
+
+<section id="wildlife">
+  <h2>Wildlife</h2>
+  <div class="grid">
+    <button data-src="img/10_Wildlife_B0001160.jpg" data-cap="Monkey Forest, Bali"><img src="img/10_Wildlife_B0001160.jpg" alt="Young macaque sitting on a stone wall" loading="lazy"></button>
+    <button data-src="img/11_Wildlife_B0001156.jpg" data-cap="Monkey Forest, Bali"><img src="img/11_Wildlife_B0001156.jpg" alt="Macaque looking sideways on a stone wall" loading="lazy"></button>
+    <button data-src="img/12_Wildlife_B0001038.jpg" data-cap="Monkey Forest, Bali"><img src="img/12_Wildlife_B0001038.jpg" alt="Macaque in a tree branch" loading="lazy"></button>
+  </div>
+</section>
+
+<section id="architecture">
+  <h2>Architecture</h2>
+  <div class="grid">
+    <button data-src="img/01_Architecture_B0003506.jpg" data-cap="Saloma Bridge, Malaysia"><img src="img/01_Architecture_B0003506.jpg" alt="Covered pedestrian bridge with a lit steel canopy" loading="lazy"></button>
+    <button data-src="img/02_Architecture_B0003476.jpg" data-cap="Green-lit bridge, Malaysia"><img src="img/02_Architecture_B0003476.jpg" alt="Green lit bridge with light trails of traffic at night" loading="lazy"></button>
+    <button data-src="img/03_Architecture_B0003510.jpg" data-cap="Petronas Towers, Kuala Lumpur"><img src="img/03_Architecture_B0003510.jpg" alt="Petronas Towers lit at night" loading="lazy"></button>
+  </div>
+</section>
+
+<footer>
+  <span>© Reyhn. All rights reserved.</span>
+  <span><a href="https://www.instagram.com/Reyhn_Raw/" target="_blank" rel="noopener">@Reyhn_Raw</a></span>
+</footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" aria-label="Close">×</button>
+  <button class="p" aria-label="Previous">‹</button>
+  <img alt="">
+  <button class="n" aria-label="Next">›</button>
+  <div class="cap"></div>
+</div>
+
+<script>
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.grid button'));
+  var lb = document.getElementById('lb');
+  var limg = lb.querySelector('img');
+  var cap = lb.querySelector('.cap');
+  var idx = 0;
+  function show(i){
+    idx = (i + items.length) % items.length;
+    var b = items[idx];
+    limg.src = b.getAttribute('data-src');
+    limg.alt = b.querySelector('img').alt;
+    cap.textContent = b.getAttribute('data-cap') || '';
+  }
+  function open(i){ show(i); lb.classList.add('open'); }
+  function close(){ lb.classList.remove('open'); limg.removeAttribute('src'); }
+  items.forEach(function(b, i){ b.addEventListener('click', function(){ open(i); }); });
+  lb.querySelector('.x').addEventListener('click', close);
+  lb.querySelector('.p').addEventListener('click', function(e){ e.stopPropagation(); show(idx - 1); });
+  lb.querySelector('.n').addEventListener('click', function(e){ e.stopPropagation(); show(idx + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+  var sx = null;
+  lb.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', function(e){
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) show(dx < 0 ? idx + 1 : idx - 1);
+    sx = null;
+  });
+})();
+</script>
